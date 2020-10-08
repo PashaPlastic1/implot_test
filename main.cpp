@@ -1,9 +1,8 @@
 #include <iostream>
 
-using namespace std;
+#include "implot/implot_demo.cpp"
 
 int main()
 {
-    cout << "Hello World!" << endl;
     return 0;
 }
