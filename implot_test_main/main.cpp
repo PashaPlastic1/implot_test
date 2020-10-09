@@ -1,5 +1,6 @@
 #include <QtImGui.h>
 #include <imgui.h>
+#include <implot.h>
 #include <QApplication>
 #include <QTimer>
 #include <QSurfaceFormat>
@@ -13,6 +14,7 @@ protected:
     {
         initializeOpenGLFunctions();
         QtImGui::initialize(this);
+        ImPlot::CreateContext();
     }
     void paintGL() override
     {
@@ -33,10 +35,8 @@ protected:
         // 2. Show another simple window, this time using an explicit Begin/End pair
         if (show_another_window)
         {
-            ImGui::SetNextWindowSize(ImVec2(200,100), ImGuiCond_FirstUseEver);
-            ImGui::Begin("Another Window", &show_another_window);
-            ImGui::Text("Hello");
-            ImGui::End();
+            ImGui::SetNextWindowPos(ImVec2(350, 20), ImGuiCond_FirstUseEver);
+            ImPlot::ShowDemoWindow();
         }
 
         // 3. Show the ImGui test window. Most of the sample code is in ImGui::ShowTestWindow()
