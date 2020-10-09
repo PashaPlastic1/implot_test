@@ -8,3 +8,9 @@
 	url = https://github.com/ocornut/imgui.git
 	branch = master
 	update = rebase
+[submodule "qtimgui"]
+	path = qtimgui
+	url = https://github.com/seanchas116/qtimgui.git
+	branch = master
+[sumodule "qtimgui"]
+	update = rebase

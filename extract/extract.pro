@@ -69,24 +69,47 @@ defineTest(extractFileSrc) {
 }
 
 ##ImGui
-!extractFileSrc(imgui/imgui.h, implot_test_main/deargui/imgui.h) {
+!extractFileSrc(qtimgui/imgui/imconfig.h, implot_test_main/deargui/imconfig.h) {
+    error("Not required files for ImGui imconfig.h!")
+}
+!extractFileSrc(qtimgui/imgui/imgui.h, implot_test_main/deargui/imgui.h) {
     error("Not required files for ImGui imgui.h!")
 }
-!extractFileSrc(imgui/imgui.cpp, implot_test_main/deargui/imgui.cpp) {
+!extractFileSrc(qtimgui/imgui/imgui.cpp, implot_test_main/deargui/imgui.cpp) {
     error("Not required files for ImGui imgui.cpp!")
 }
-!extractFileSrc(imgui/imgui_internal.h, implot_test_main/deargui/imgui_internal.h) {
+!extractFileSrc(qtimgui/imgui/imgui_internal.h, implot_test_main/deargui/imgui_internal.h) {
     error("Not required files for ImGui imgui_internal.h!")
 }
-!extractFileSrc(imgui/imstb_textedit.h, implot_test_main/deargui/imstb_textedit.h) {
+!extractFileSrc(qtimgui/imgui/imstb_textedit.h, implot_test_main/deargui/imstb_textedit.h) {
     error("Not required files for ImGui imstb_textedit.h!")
 }
-!extractFileSrc(imgui/imgui_draw.cpp, implot_test_main/deargui/imgui_draw.cpp) {
+!extractFileSrc(qtimgui/imgui/imstb_truetype.h, implot_test_main/deargui/imstb_truetype.h) {
+    error("Not required files for ImGui imstb_textedit.h!")
+}
+!extractFileSrc(qtimgui/imgui/imstb_rectpack.h, implot_test_main/deargui/imstb_rectpack.h) {
+    error("Not required files for ImGui imstb_textedit.h!")
+}
+!extractFileSrc(qtimgui/imgui/imgui_draw.cpp, implot_test_main/deargui/imgui_draw.cpp) {
     error("Not required files for ImGui imgui_draw.cpp!")
 }
-!extractFileSrc(imgui/imgui_widgets.cpp, implot_test_main/deargui/imgui_widgets.cpp) {
+!extractFileSrc(qtimgui/imgui/imgui_widgets.cpp, implot_test_main/deargui/imgui_widgets.cpp) {
     error("Not required files for ImGui imgui_widgets.cpp!")
 }
-!extractFileSrc(imgui/imgui_demo.cpp, implot_test_main/deargui/imgui_demo.cpp) {
+!extractFileSrc(qtimgui/imgui/imgui_demo.cpp, implot_test_main/deargui/imgui_demo.cpp) {
     error("Not required files for ImGui imgui_demo.cpp!")
+}
+
+##QtImGui
+!extractFileSrc(qtimgui/QtImGui.h, implot_test_main/deargui/QtImGui.h) {
+    error("Not required files for QtImGui QtImGui.h!")
+}
+!extractFileSrc(qtimgui/QtImGui.cpp, implot_test_main/deargui/QtImGui.cpp) {
+    error("Not required files for QtImGui QtImGui.cpp!")
+}
+!extractFileSrc(qtimgui/ImGuiRenderer.h, implot_test_main/deargui/ImGuiRenderer.h) {
+    error("Not required files for QtImGui ImGuiRenderer.h!")
+}
+!extractFileSrc(qtimgui/ImGuiRenderer.cpp, implot_test_main/deargui/ImGuiRenderer.cpp) {
+    error("Not required files for QtImGui ImGuiRenderer.cpp!")
 }

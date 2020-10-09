@@ -1,9 +1,11 @@
+QT += core gui widgets
 TEMPLATE = app
-CONFIG += console c++11
-CONFIG -= app_bundle
-CONFIG -= qt
+CONFIG += c++17
+
 
 SOURCES += \
+        deargui/ImGuiRenderer.cpp \
+        deargui/QtImGui.cpp \
         deargui/imgui.cpp \
         deargui/imgui_demo.cpp \
         deargui/imgui_draw.cpp \
@@ -13,9 +15,16 @@ SOURCES += \
         deargui/implot_items.cpp \
         main.cpp
 
+INCLUDEPATH += $$PWD/deargui $$PWD
+
 HEADERS += \
+    deargui/ImGuiRenderer.h \
+    deargui/QtImGui.h \
+    deargui/imconfig.h \
     deargui/imgui.h \
     deargui/imgui_internal.h \
     deargui/implot.h \
     deargui/implot_internal.h \
-    deargui/imstb_textedit.h
+    deargui/imstb_rectpack.h \
+    deargui/imstb_textedit.h \
+    deargui/imstb_truetype.h
