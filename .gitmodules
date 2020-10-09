@@ -3,11 +3,6 @@
 	url = https://github.com/epezent/implot.git
 	branch = master
 	update = rebase
-[submodule "imgui"]
-	path = imgui
-	url = https://github.com/ocornut/imgui.git
-	branch = master
-	update = rebase
 [submodule "qtimgui"]
 	path = qtimgui
 	url = https://github.com/seanchas116/qtimgui.git
