@@ -1,6 +1,6 @@
 #include <QtImGui.h>
-#include <imgui.h>
 #include <implot.h>
+#include <imgui.h>
 #include <QApplication>
 #include <QTimer>
 #include <QSurfaceFormat>
@@ -15,6 +15,8 @@ protected:
         initializeOpenGLFunctions();
         QtImGui::initialize(this);
         ImPlot::CreateContext();
+        ImGuiIO& io = ImGui::GetIO();
+        io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
     }
     void paintGL() override
     {
@@ -40,11 +42,11 @@ protected:
         }
 
         // 3. Show the ImGui test window. Most of the sample code is in ImGui::ShowTestWindow()
-        if (show_test_window)
-        {
-            ImGui::SetNextWindowPos(ImVec2(650, 20), ImGuiCond_FirstUseEver);
-            ImGui::ShowDemoWindow();
-        }
+//        if (show_test_window)
+//        {
+//            ImGui::SetNextWindowPos(ImVec2(650, 20), ImGuiCond_FirstUseEver);
+//            ImGui::ShowDemoWindow();
+//        }
 
         // Do render before ImGui UI is rendered
         glViewport(0, 0, width(), height());
